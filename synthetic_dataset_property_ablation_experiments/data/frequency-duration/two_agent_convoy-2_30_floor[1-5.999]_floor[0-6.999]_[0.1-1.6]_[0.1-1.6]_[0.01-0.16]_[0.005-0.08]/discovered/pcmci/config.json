@@ -1,0 +1,1 @@
+{"tau_min": "1", "tau_max": "100", "alpha": "0.05", "cond_ind_test": "parcorr", "linear_algebra_errors_throw": "False", "timeout": "79"}

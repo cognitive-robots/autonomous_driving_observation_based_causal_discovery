@@ -1,0 +1,1 @@
+{"cuda": "True", "epochs": "5000", "kernel_size": "4", "hidden_layers": "2", "learning_rate": "0.01", "optimizer": "Adam", "seed": "1111", "dilation_coefficient": "4", "significance": "0.8"}
