@@ -1,15 +1,6 @@
 [submodule "synthetic_dataset_property_ablation_experiments/tcdf"]
-	path = synthetic_dataset_property_ablation_experiments/tcdf
+	path = scripts/tcdf
 	url = https://github.com/cognitive-robots/TCDF
 [submodule "synthetic_dataset_property_ablation_experiments/pcmci"]
-	path = synthetic_dataset_property_ablation_experiments/pcmci
+	path = scripts/pcmci
 	url = https://github.com/cognitive-robots/PCMCI
-[submodule "synthetic_dataset_property_ablation_experiments/random_causal_discovery"]
-	path = synthetic_dataset_property_ablation_experiments/rand
-	url = https://github.com/cognitive-robots/random_causal_discovery
-[submodule "synthetic_dataset_property_ablation_experiments/causal_scenario_generation"]
-	path = synthetic_dataset_property_ablation_experiments/causal_scenario_generation
-	url = https://github.com/cognitive-robots/causal_scenario_generation
-[submodule "synthetic_dataset_property_ablation_experiments/causal_discovery_evaluation"]
-	path = synthetic_dataset_property_ablation_experiments/causal_discovery_evaluation
-	url = https://github.com/cognitive-robots/causal_discovery_evaluation
