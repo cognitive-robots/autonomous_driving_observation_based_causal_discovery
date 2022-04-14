@@ -4,3 +4,9 @@
 [submodule "scripts/tcdf"]
 	path = scripts/tcdf
 	url = https://github.com/cognitive-robots/TCDF
+[submodule "scripts/lyft_prediction_dataset_tools"]
+	path = scripts/lyft_prediction_dataset_tools
+	url = git@github.com:cognitive-robots/lyft_prediction_dataset_tools.git
+[submodule "scripts/highd_dataset_tools"]
+	path = scripts/highd_dataset_tools
+	url = git@github.com:cognitive-robots/highd_dataset_tools.git
