@@ -8,3 +8,4 @@ Evaluates the performance of a causal discovery attempt on a two agent convoy sc
 Parameters:
 * discoveries_file_path: File path regex to specify input discovered causal model files.
 * output_file_path: File path to output evaluation results to.
+* -h: Displays the help message for the script.
