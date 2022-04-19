@@ -5,7 +5,7 @@ import csv
 import math
 import argparse
 
-arg_parser = argparse.ArgumentParser("Resamples the data in the supplied file to a difference frequency")
+arg_parser = argparse.ArgumentParser(description="Resamples the data in the supplied file to a difference frequency")
 arg_parser.add_argument("input_file_path")
 arg_parser.add_argument("input_frequency", type=float)
 arg_parser.add_argument("output_file_path")
