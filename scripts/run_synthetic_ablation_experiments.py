@@ -7,8 +7,8 @@ import os
 os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"
 os.environ['CUDA_VISIBLE_DEVICES'] = '1'
 
-import causal_scenario_generation.create_two_agent_convoy_scenario
-import causal_discovery_evaluation.evaluate_two_agent_convoy_causal_discovery
+import scenario_generation.create_two_agent_convoy_scenario
+import discovery_evaluation.evaluate_two_agent_convoy_causal_discovery
 import rand
 import tcdf
 import pcmci
