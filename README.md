@@ -1,4 +1,4 @@
-# Evaluation of Contemporary Observation-Based Causal Discovery Techniques in the Autonomous Driving Domain
+# Evaluating Temporal Observation-Based Causal Discovery Techniques Applied to Road Driver Behaviour
 
 The data and scripts here relate to experiments carried out as part of a body of research work determining how readily existing causal discovery techniques based upon observation can be applied to the domain of autonomous driving.
 The research work in question is currently under peer review and the documentation here will be updated with links and citation information if and when the paper has successfully passed the peer review process.
