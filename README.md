@@ -36,3 +36,18 @@ Due to most of the datasets sharing a similar file structure, the general file s
     * parents: List of variables that are parents in a causal relationship with this variable, i.e. The listed variables have an effect on this particular variable.
 * duration: Duration of the scene.
 * runtime: Runtime of applying the causal discovery approach to the scene.
+
+## Paper
+Corresponding conference paper accepted at Causal Learning and Reasoning 2023 (Pre-print): https://arxiv.org/abs/2302.00064
+
+Please cite the following if you use the contents of this repository in your work:
+```
+@inproceedings{howard2023evaluating,
+    author    = "Howard, Rhys and Kunze, Lars",
+    title     = "Evaluating Temporal Observation-Based Causal Discovery Techniques Applied to Road Driver Behaviour",
+    booktitle = "Proceedings of the 2nd Conference on Causal Learning and Reasoning",
+    publisher = "Journal of Machine Learning Research",
+    year      = "2023",
+    editor    = "van der Shaar, Mihaela and Janzing, Dominik and Zhang, Cheng"
+}
+```
