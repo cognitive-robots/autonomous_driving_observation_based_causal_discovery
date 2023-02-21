@@ -3,7 +3,7 @@
 import os
 import random
 import argparse
-import create_two_agent_convoy_scenario
+import create_two_agent_convoy_scene
 
 class ValueInterface:
     def get_value(self) -> float:
@@ -45,10 +45,10 @@ class ValueFlooredRange(ValueInterface):
         return "floor[" + str(self.min_value) + "-" + str(self.max_value) + "]"
 
 if __name__ == "__main__":
-    arg_parser = argparse.ArgumentParser(description="Generates a collection of two agent convoy scenarios")
+    arg_parser = argparse.ArgumentParser(description="Generates a collection of two agent convoy scenario scenes")
     arg_parser.add_argument("output_dir_path")
     arg_parser.add_argument("--variable", default="acceleration")
-    arg_parser.add_argument("--scenario_count", default=100)
+    arg_parser.add_argument("--scene_count", default=100)
     args = arg_parser.parse_args()
 
     working_dir = args.output_dir_path
@@ -68,9 +68,9 @@ if __name__ == "__main__":
     fixed_sensory_noise_value = ValueRange(0.01, 0.16)
     proportional_sensory_noise_value = ValueRange(0.005, 0.08)
 
-    for i in range(args.scenario_count):
+    for i in range(args.scene_count):
         output_file_path = os.path.join(working_dir, f"scene-{i}.csv")
-        create_two_agent_convoy_scenario.create_two_agent_convoy_scenario(
+        create_two_agent_convoy_scene.create_two_agent_convoy_scene(
             output_file_path,
             convoy_actions_value.get_value(),
             independent_actions_value.get_value(),
@@ -83,7 +83,7 @@ if __name__ == "__main__":
             proportional_sensory_noise=proportional_sensory_noise_value.get_value()
         )
     output_file_path = os.path.join(working_dir, "config.json")
-    create_two_agent_convoy_scenario.create_two_agent_convoy_scenario_config_file(
+    create_two_agent_convoy_scene.create_two_agent_convoy_scene_config_file(
         output_file_path,
         convoy_actions_value.get_string(),
         independent_actions_value.get_string(),

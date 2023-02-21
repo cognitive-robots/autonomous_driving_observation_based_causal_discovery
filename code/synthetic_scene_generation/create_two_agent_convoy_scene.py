@@ -7,7 +7,7 @@ import argparse
 import math
 import json
 
-def create_two_agent_convoy_scenario_config_file(
+def create_two_agent_convoy_scene_config_file(
 output_file_path,
 number_of_convoy_actions,
 number_of_independent_actions,
@@ -66,7 +66,7 @@ proportional_sensory_noise = 0.0
     with open(output_file_path, 'w') as output_file:
         json.dump(config, output_file)
 
-def create_two_agent_convoy_scenario_config_file_with_action_range(
+def create_two_agent_convoy_scene_config_file_with_action_range(
 output_file_path,
 minimum_number_of_convoy_actions = 24,
 maximum_number_of_convoy_actions = 40,
@@ -94,7 +94,7 @@ proportional_actuary_noise = 0.0,
 fixed_sensory_noise = 0.0, # m
 proportional_sensory_noise = 0.0
 ):
-    create_two_agent_convoy_scenario_config_file(
+    create_two_agent_convoy_scene_config_file(
         output_file_path,
         "[" + str(minimum_number_of_convoy_actions) + "-" + str(maximum_number_of_convoy_actions) + "]",
         "[" + str(minimum_number_of_independent_actions) + "-" + str(maximum_number_of_independent_actions) + "]",
@@ -121,7 +121,7 @@ proportional_sensory_noise = 0.0
         proportional_sensory_noise=proportional_sensory_noise
     )
 
-def create_two_agent_convoy_scenario(
+def create_two_agent_convoy_scene(
 output_file_path,
 number_of_convoy_actions,
 number_of_independent_actions,
@@ -147,7 +147,7 @@ proportional_actuary_noise = 0.0,
 fixed_sensory_noise = 0.0, # m
 proportional_sensory_noise = 0.0
 ):
-    create_two_agent_convoy_scenario_with_action_range(
+    create_two_agent_convoy_scene_with_action_range(
         output_file_path,
         minimum_number_of_convoy_actions=number_of_convoy_actions,
         maximum_number_of_convoy_actions=number_of_convoy_actions,
@@ -176,7 +176,7 @@ proportional_sensory_noise = 0.0
         proportional_sensory_noise=proportional_sensory_noise
     )
 
-def create_two_agent_convoy_scenario_with_action_range(
+def create_two_agent_convoy_scene_with_action_range(
 output_file_path,
 minimum_number_of_convoy_actions = 24,
 maximum_number_of_convoy_actions = 40,
@@ -425,8 +425,8 @@ proportional_sensory_noise = 0.0
     return frames
 
 if __name__ == "__main__":
-    arg_parser = argparse.ArgumentParser(description="Generates synthetic data for a two agent convoy scenario")
+    arg_parser = argparse.ArgumentParser(description="Generates synthetic data for a two agent convoy scenario scene")
     arg_parser.add_argument("output_file_path")
     args = arg_parser.parse_args()
 
-    create_two_agent_convoy_scenario_with_action_range(args.output_file_path)
+    create_two_agent_convoy_scene_with_action_range(args.output_file_path)
