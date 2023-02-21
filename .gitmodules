@@ -1,12 +1,12 @@
 [submodule "scripts/pcmci"]
-	path = scripts/pcmci
+	path = code/pcmci
 	url = https://github.com/cognitive-robots/PCMCI
 [submodule "scripts/tcdf"]
-	path = scripts/tcdf
+	path = code/tcdf
 	url = https://github.com/cognitive-robots/TCDF
 [submodule "scripts/lyft_prediction_dataset_tools"]
-	path = scripts/lyft_prediction_dataset_tools
+	path = code/lyft_prediction_dataset_tools
 	url = git@github.com:cognitive-robots/lyft_prediction_dataset_tools.git
 [submodule "scripts/highd_dataset_tools"]
-	path = scripts/highd_dataset_tools
+	path = code/highd_dataset_tools
 	url = git@github.com:cognitive-robots/highd_dataset_tools.git
