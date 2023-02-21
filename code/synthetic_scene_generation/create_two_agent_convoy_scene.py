@@ -11,6 +11,7 @@ def create_two_agent_convoy_scenario_config_file(
 output_file_path,
 number_of_convoy_actions,
 number_of_independent_actions,
+variable = "acceleration",
 minimum_convoy_distance = 10, # m
 maximum_convoy_distance = 100, # m
 K_p = 1.0,
@@ -39,6 +40,7 @@ proportional_sensory_noise = 0.0
     config = {
         "number_of_convoy_actions": str(number_of_convoy_actions),
         "number_of_independent_actions": str(number_of_independent_actions),
+        "variable": str(variable),
         "minimum_convoy_distance": str(minimum_convoy_distance),
         "maximum_convoy_distance": str(maximum_convoy_distance),
         "K_p": str(K_p),
@@ -68,6 +70,7 @@ def create_two_agent_convoy_scenario_config_file_with_action_range(
 output_file_path,
 minimum_number_of_convoy_actions = 24,
 maximum_number_of_convoy_actions = 40,
+variable = "acceleration",
 minimum_number_of_independent_actions = 0,
 maximum_number_of_independent_actions = 80,
 minimum_convoy_distance = 10, # m
@@ -95,6 +98,7 @@ proportional_sensory_noise = 0.0
         output_file_path,
         "[" + str(minimum_number_of_convoy_actions) + "-" + str(maximum_number_of_convoy_actions) + "]",
         "[" + str(minimum_number_of_independent_actions) + "-" + str(maximum_number_of_independent_actions) + "]",
+        variable=variable,
         minimum_convoy_distance=minimum_convoy_distance,
         maximum_convoy_distance=maximum_convoy_distance,
         K_p=K_p,
@@ -121,6 +125,7 @@ def create_two_agent_convoy_scenario(
 output_file_path,
 number_of_convoy_actions,
 number_of_independent_actions,
+variable = "acceleration",
 minimum_convoy_distance = 10, # m
 maximum_convoy_distance = 100, # m
 K_p = 1.0,
@@ -146,6 +151,7 @@ proportional_sensory_noise = 0.0
         output_file_path,
         minimum_number_of_convoy_actions=number_of_convoy_actions,
         maximum_number_of_convoy_actions=number_of_convoy_actions,
+        variable=variable,
         minimum_number_of_independent_actions=number_of_independent_actions,
         maximum_number_of_independent_actions=number_of_independent_actions,
         minimum_convoy_distance=minimum_convoy_distance,
@@ -174,6 +180,7 @@ def create_two_agent_convoy_scenario_with_action_range(
 output_file_path,
 minimum_number_of_convoy_actions = 24,
 maximum_number_of_convoy_actions = 40,
+variable = "acceleration",
 minimum_number_of_independent_actions = 0,
 maximum_number_of_independent_actions = 80,
 minimum_convoy_distance = 10, # m
@@ -221,12 +228,19 @@ proportional_sensory_noise = 0.0
         combined_frame = { **independent_frame, **convoy_head_frame, **convoy_tail_frame}
         combined_frames.append(combined_frame)
 
-    columns = ["c0.a", "c1.a", "i0.a"]
+    if variable == "acceleration":
+        columns = ["time_index", "c0.a", "c1.a", "i0.a"]
+    elif variable == "velocity":
+        columns = ["time_index", "c0.v", "c1.v", "i0.v"]
+    else:
+        raise ValueError("Variable parameter does not correspond to an applicable parameter")
     rows = []
 
-    for combined_frame in combined_frames:
-        row = {}
+    for (i, combined_frame) in enumerate(combined_frames):
+        row = { "time_index": i }
         for column in columns:
+            if column == "time_index":
+                continue
             row[column] = combined_frame[column]
         rows.append(row)
 
