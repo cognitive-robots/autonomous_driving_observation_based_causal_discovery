@@ -1,6 +1,6 @@
 [submodule "scripts/lyft_prediction_dataset_tools"]
-	path = code/lyft_prediction_dataset_tools
+	path = code/utilities/lyft_prediction_dataset_tools
 	url = git@github.com:cognitive-robots/lyft_prediction_dataset_tools.git
 [submodule "scripts/highd_dataset_tools"]
-	path = code/highd_dataset_tools
+	path = code/utilities/highd_dataset_tools
 	url = git@github.com:cognitive-robots/highd_dataset_tools.git
