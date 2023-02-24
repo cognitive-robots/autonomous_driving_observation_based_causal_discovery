@@ -5,7 +5,7 @@ import glob
 import csv
 import statistics
 
-arg_parser = argparse.ArgumentParser("Takes a selection of scene files and returns statistics regarding the scene length")
+arg_parser = argparse.ArgumentParser(description="Takes a selection of scene files and returns statistics regarding the scene length")
 arg_parser.add_argument("scene_file_path_wildcard")
 arg_parser.add_argument("--sampling-frequency", type=float, default=10.0)
 args = arg_parser.parse_args()
