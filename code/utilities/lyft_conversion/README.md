@@ -1,6 +1,9 @@
-# Conversion Scripts
+# Lyft Conversion
+Scripts specific to this paper for converting Lyft scenes from an intermediary data format to two-agent convoy scenario scenes stored in a CSV format.
+
 ## Scene Commands
 Individual scripts used to convert from intermediary agent data to two agent convoy scenarios that causal discovery can be carried out on.
+
 ## Agent JSON Data to Two Agent Convoy
 Converts an entire directory of intemediary agent data files to two agent convoy scenario files that causal discovery can be carried out on.
 
