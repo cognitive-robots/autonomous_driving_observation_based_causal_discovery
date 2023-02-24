@@ -4,3 +4,6 @@
 [submodule "scripts/highd_dataset_tools"]
 	path = code/utilities/highd_dataset_tools
 	url = git@github.com:cognitive-robots/highd_dataset_tools.git
+[submodule "code/causal_discovery_for_time_series"]
+	path = code/causal_discovery_for_time_series
+	url = git@github.com:cognitive-robots/causal_discovery_for_time_series.git
