@@ -1,0 +1,15 @@
+Other Precision Adjacent: 
+0.295 +- 0.23904323179430673
+Other Recall Adjacent: 
+0.71 +- 0.45376205218153715
+Other F-Score Adjacent: 
+0.405 +- 0.2830930353552815
+Other Precision Oriented: 
+0.14766666666666667 +- 0.18613047992082207
+Other Recall Oriented: 
+0.5 +- 0.5
+Other F-Score Oriented: 
+0.21938095238095237 +- 0.24111819534614995
+
+
+Computational Time: 2.7303695678710937e-05 +- 3.5511532967337126e-06
